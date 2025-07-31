@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vitrine de Produtos Amazon</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    .tabs { display: flex; cursor: pointer; }
+    .tab {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      background: #f1f1f1;
+      margin-right: 2px;
+      border-radius: 5px 5px 0 0;
+    }
+    .tab.active { background: #fff; border-bottom: 1px solid #fff; font-weight: bold; }
+    .tab-content {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 0 5px 5px 5px;
+      background: #fff;
+    }
+    .produto {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .produto img { width: 80px; height: 80px; object-fit: contain; margin-right: 15px; }
+    .produto-nome { font-size: 1.1em; }
+    .produto-preco { color: #c60; margin-left: 10px; }
+    .produto-link { margin-left: 10px; color: #1a0dab; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Vitrine de Produtos Amazon</h1>
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('promocoes')">Promoções</div>
+    <div class="tab" onclick="showTab('livros')">Livros</div>
+    <div class="tab" onclick="showTab('outros')">Outros Produtos</div>
+  </div>
+  <div id="promocoes" class="tab-content">
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Promo1" alt="Produto Promoção 1">
+      <span class="produto-nome">Produto em Promoção 1</span>
+      <span class="produto-preco">R$ 99,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Promo2" alt="Produto Promoção 2">
+      <span class="produto-nome">Produto em Promoção 2</span>
+      <span class="produto-preco">R$ 129,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+  </div>
+  <div id="livros" class="tab-content" style="display:none">
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Livro1" alt="Livro 1">
+      <span class="produto-nome">Livro Incrível</span>
+      <span class="produto-preco">R$ 39,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Livro2" alt="Livro 2">
+      <span class="produto-nome">Outro Livro Legal</span>
+      <span class="produto-preco">R$ 49,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+  </div>
+  <div id="outros" class="tab-content" style="display:none">
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Outro1" alt="Outro Produto 1">
+      <span class="produto-nome">Fone de Ouvido Bluetooth</span>
+      <span class="produto-preco">R$ 199,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+    <div class="produto">
+      <img src="https://via.placeholder.com/80?text=Outro2" alt="Outro Produto 2">
+      <span class="produto-nome">Cafeteira Elétrica</span>
+      <span class="produto-preco">R$ 219,90</span>
+      <a class="produto-link" href="#" target="_blank">Ver na Amazon</a>
+    </div>
+  </div>
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      const idx = { 'promocoes': 0, 'livros': 1, 'outros': 2 }[tabId];
+      document.querySelectorAll('.tab')[idx].classList.add('active');
+    }
+  </script>
+</body>
+</html>
