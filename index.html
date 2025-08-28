@@ -2,58 +2,145 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitrine da Gabi</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Vitrine da Gabi</h1>
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('promocoes')">Promoções</div>
-    <div class="tab" onclick="showTab('livros')">Livros</div>
-    <div class="tab" onclick="showTab('outros')">Outros Produtos</div>
-  </div>
-  <div id="promocoes" class="tab-content">
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=80&q=80" alt="Produto Promoção 1">
-      <span class="produto-nome">Produto em Promoção 1</span>
-      <span class="produto-preco">R$ 99,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+  <!-- Logo -->
+  <header class="header">
+    <div class="logo">
+            <img src="logo-vitrine-gabi.png" alt="Logo Vitrine da Gabi" />
     </div>
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Produto Promoção 2">
-      <span class="produto-nome">Produto em Promoção 2</span>
-      <span class="produto-preco">R$ 129,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#promocoes">Promoções</a></li>
+        <li><a href="#destaques">Destaques</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Produtos Promocionais -->
+  <section id="promocoes" class="promocoes">
+    <h2>Produtos em Promoção</h2>
+    <div class="produtos-grid">
+      <div class="produto-card">
+        <span class="desconto">-35% OFF</span>
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Vestido 1" />
+        <h3>Vestido Verde</h3>
+        <p class="preco">R$182,00 <span class="preco-antigo">R$282,00</span></p>
+        <button>Comprar</button>
+      </div>
+      <div class="produto-card">
+        <span class="desconto">-20% OFF</span>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Vestido 2" />
+        <h3>Vestido Rosa</h3>
+        <p class="preco">R$150,00 <span class="preco-antigo">R$188,00</span></p>
+        <button>Comprar</button>
+      </div>
+      <div class="produto-card">
+        <span class="desconto">-15% OFF</span>
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Vestido 3" />
+        <h3>Vestido Branco</h3>
+        <p class="preco">R$120,00 <span class="preco-antigo">R$140,00</span></p>
+        <button>Comprar</button>
+      </div>
     </div>
-  </div>
-  <div id="livros" class="tab-content" style="display:none">
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=80&q=80" alt="Livro 1">
-      <span class="produto-nome">Livro Incrível</span>
-      <span class="produto-preco">R$ 39,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+  </section>
+
+  <!-- Mensagem de Boas-Vindas -->
+  <section class="boas-vindas">
+    <h2>Bem-vinda à Vitrine da Gabi!</h2>
+    <p>Descubra as melhores ofertas e novidades em moda feminina. Aproveite nossos descontos exclusivos e monte seu look perfeito!</p>
+  </section>
+
+  <!-- Sessão de Destaques -->
+  <section id="destaques" class="destaques">
+    <h2>Destaques</h2>
+    <div class="destaques-grid">
+      <div class="destaque-item">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Destaque 1" />
+        <h3>Novidades da Semana</h3>
+      </div>
+      <div class="destaque-item">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Destaque 2" />
+        <h3>Looks em Alta</h3>
+      </div>
+      <div class="destaque-item">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Destaque 3" />
+        <h3>Favoritos das Clientes</h3>
+      </div>
     </div>
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=80&q=80" alt="Livro 2">
-      <span class="produto-nome">Outro Livro Legal</span>
-      <span class="produto-preco">R$ 49,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+  </section>
+
+  <!-- Sessão de Ebooks -->
+  <section id="ebooks" class="sessao">
+    <h2>Ebooks</h2>
+    <div class="produtos-grid">
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Ebook 1" />
+        <h3>Guia de Moda Cristã</h3>
+        <p class="preco">R$19,90</p>
+        <button>Ver Ebook</button>
+      </div>
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Ebook 2" />
+        <h3>Devocional Diário</h3>
+        <p class="preco">Grátis</p>
+        <button>Ver Ebook</button>
+      </div>
     </div>
-  </div>
-  <div id="outros" class="tab-content" style="display:none">
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=80&q=80" alt="Fone de Ouvido Bluetooth">
-      <span class="produto-nome">Fone de Ouvido Bluetooth</span>
-      <span class="produto-preco">R$ 199,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+  </section>
+
+  <!-- Sessão de Devocionais -->
+  <section id="devocionais" class="sessao">
+    <h2>Devocionais</h2>
+    <div class="produtos-grid">
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Devocional 1" />
+        <h3>Devocional Mulher Virtuosa</h3>
+        <p class="preco">R$29,90</p>
+        <button>Ver Devocional</button>
+      </div>
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Devocional 2" />
+        <h3>Devocional Jovem</h3>
+        <p class="preco">R$24,90</p>
+        <button>Ver Devocional</button>
+      </div>
     </div>
-    <div class="produto">
-      <img src="https://images.unsplash.com/photo-1519121782439-2c5f2c2a3c8b?auto=format&fit=crop&w=80&q=80" alt="Cafeteira Elétrica">
-      <span class="produto-nome">Cafeteira Elétrica</span>
-      <span class="produto-preco">R$ 219,90</span>
-      <a class="produto-link" href="#" target="_blank">Ver Produto</a>
+  </section>
+
+  <!-- Sessão de Produtos da Shopee -->
+  <section id="shopee" class="sessao">
+    <h2>Produtos da Shopee</h2>
+    <div class="produtos-grid">
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Shopee 1" />
+        <h3>Pulseira Feminina</h3>
+        <p class="preco">R$12,90</p>
+        <button>Ver na Shopee</button>
+      </div>
+      <div class="produto-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Shopee 2" />
+        <h3>Bolsa Casual</h3>
+        <p class="preco">R$39,90</p>
+        <button>Ver na Shopee</button>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.instagram.com/gabriellynunessilva_/" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://wa.me/5527981821710" target="_blank" rel="noopener"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+    </div>
+    <p>&copy; site criado por CodeWave 2025. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
